@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=45", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "josi"
+version = "0.1.0"
+description = "Josi — Just Output What I Say Instantly. Natural-language programming by Josiah. Free speech + zero logs."
+readme = "README.md"
+requires-python = ">=3.8"
+license = {text = "MIT"}
+authors = [{name = "Josiah"}]
+keywords = ["programming-language", "natural-language", "ai", "free-speech", "privacy", "uncensored"]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "License :: OSI Approved :: MIT License",
+]
+
+[project.urls]
+Homepage = "https://github.com/josiahg402/josi"
