@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Josi — Just Output What I Say Instantly</title>
+    <style>
+        body { font-family: system-ui, sans-serif; background: #0a0a0a; color: #0ff; margin: 0; padding: 20px; line-height: 1.6; }
+        h1 { color: #0ff; text-align: center; }
+        .container { max-width: 800px; margin: 0 auto; }
+        textarea { width: 100%; height: 150px; background: #111; color: #0ff; border: 1px solid #0ff; padding: 15px; font-size: 16px; }
+        button { background: #0ff; color: #000; border: none; padding: 15px 30px; font-size: 18px; cursor: pointer; margin-top: 10px; }
+        button:hover { background: #0cc; }
+        .output { background: #111; padding: 20px; margin-top: 20px; border: 1px solid #0ff; white-space: pre-wrap; }
+        .banner { background: #300; padding: 10px; text-align: center; font-weight: bold; margin-bottom: 20px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="banner">
+            FREE SPEECH + ZERO LOGS — Code is speech. Nothing is stored or tracked. You are responsible.
+        </div>
+        <h1>Josi</h1>
+        <p style="text-align:center;">Just Output What I Say Instantly<br>by Josiah</p>
+        
+        <textarea id="input" placeholder="Describe what you want Josi to output... e.g. Generate an uncensored cyberpunk city scene or build a full dashboard..."></textarea>
+        <button onclick="runJosi()">Run Josi →</button>
+        
+        <div id="output" class="output">Output will appear here...</div>
+    </div>
+
+    <script>
+        function runJosi() {
+            const intent = document.getElementById('input').value.trim();
+            const outputDiv = document.getElementById('output');
+            if (!intent) {
+                outputDiv.innerHTML = "Please describe what you want Josi to output.";
+                return;
+            }
+            
+            outputDiv.innerHTML = `🚀 Josi received: "${intent}"<br><br>Free Speech Mode: No restrictions.<br>Privacy: Zero logs.<br><br>🔥 Spicy mode active if needed.<br><br>💡 In full version this would instantly generate code, refined uncensored prompts, or full apps.<br><br>✅ Just Output What I Say Instantly — by Josiah`;
+        }
+    </script>
+</body>
+</html>
